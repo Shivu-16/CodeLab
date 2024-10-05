@@ -5,7 +5,7 @@ import AppContext from '../context/AppContext';
 import { useNavigate } from 'react-router-dom';
 import logo from '/icon.png'
 import DevIcon from '../assets/dev.png'
-import { FaCode, FaLinkedinIn, FaGithub, FaInstagram } from "react-icons/fa6";
+import { FaCode, FaLinkedinIn, FaGithub, FaInstagram, FaBook } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import useWindowWidth from '../hooks/useWindowWidth';
 import DefaultDP from '../assets/dev.png';
@@ -190,36 +190,36 @@ const Header = () => {
                         <img src={DevIcon} alt="" className='size-32'/>
                         <div className='text-center text-xl flex flex-col items-center justify-center gap-1'>
                             <span className=''>This project is developed and maintained by</span>
-                            <span className='font-bold text-2xl'>Harsh Priye</span>
+                            <span className='font-bold text-2xl'>Shivam Sharma | 4th year, NSUT</span>
                         </div>
                         <div className='w-full flex items-center justify-center gap-3 flex-wrap'>
                             <div
                                 className='transition-all duration-200 flex items-center justify-center text-center gap-2 rounded-full p-1 bg-white text-black border-2 border-white cursor-pointer hover:bg-black hover:text-white hover:scale-125'
-                                onClick={()=>linkRedirect('https://www.harshpriye.in')} //url change
+                                onClick={()=>linkRedirect('https://shivu-16.github.io/threejs-3d-portfolio/')} 
                             >
                                 <FaCode size={20}/>
                                 <div>Portfolio</div>
                             </div>
                             <div
                                 className='transition-all duration-200 flex items-center justify-center text-center gap-2 rounded-full p-1 bg-white text-black border-2 border-white cursor-pointer hover:bg-black hover:text-white hover:scale-125'
-                                onClick={()=>linkRedirect('https://www.linkedin.com/in/harshpx/')} //url change
+                                onClick={()=>linkRedirect('www.linkedin.com/in/iamshivam16')}
                             >
                                 <FaLinkedinIn size={20}/>
                                 <div>Linkedin</div>
                             </div>
                             <div 
                                 className='transition-all duration-200 flex items-center justify-center text-center gap-2 rounded-full p-1 bg-white text-black border-2 border-white cursor-pointer hover:bg-black hover:text-white hover:scale-125'
-                                onClick={()=>linkRedirect('https://github.com/harshpx')} //url change
+                                onClick={()=>linkRedirect('https://github.com/Shivu-16')}
                             >
                                 <FaGithub size={20}/>
                                 <div>GitHub</div>
                             </div>
                             <div
                                 className='transition-all duration-200 flex items-center justify-center text-center gap-2 rounded-full p-1 bg-white text-black border-2 border-white cursor-pointer hover:bg-black hover:text-white hover:scale-125'
-                                onClick={()=>linkRedirect('https://www.instagram.com/harshhh.hhhh/')} //url change
+                                onClick={()=>linkRedirect('https://drive.google.com/file/d/16EZZgungbtTtdrC5EcCAyYhYzNnqZI0Q/view?usp=sharing')} 
                             >
-                                <FaInstagram size={20}/>
-                                <div>Instagram</div>
+                                <FaBook size={20}/>
+                                <div>CV</div>
                             </div>
                         </div>
                         <div className='text-center text-[15px]'>
@@ -230,11 +230,11 @@ const Header = () => {
                             <FaCode size={19}/> 
                             <span className='text-[16px]'>Source Code:</span>
                             <a 
-                                href="https://github.com/harshpx/CodeLab" //url change
+                                href="https://github.com/Shivu-16/CodeLab" 
                                 target="_blank" 
                                 className='transition-all duration-200 text-[16px] text-[#5fc4ff] hover:underline'
                             >
-                                github.com/harshpx/CodeLab
+                                github.com/Shivu-16/CodeLab
                             </a>
                         </div>
                     </div>
