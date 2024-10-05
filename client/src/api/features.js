@@ -2,7 +2,7 @@ import React from "react";
 
 
 export const codeCompile = async (language, code, input) => {
-    const URL = "http://localhost:4000/api/compile";//change after 6 7
+    const URL = "https://codelab-server-bo57m0rzi-shivam-sharma-s-projects.vercel.app/api/compile";//change after 6 7
     const options = {
         method: "POST",
         headers: {
@@ -24,7 +24,7 @@ export const codeCompile = async (language, code, input) => {
 
 export const fetchCodes = async(user)=>{
     console.log(user.token)
-    const url = 'http://localhost:4000/api/codes';
+    const url = 'https://codelab-server-bo57m0rzi-shivam-sharma-s-projects.vercel.app/api/codes';
     const options = {
         method: 'GET',
         headers: {
@@ -43,7 +43,7 @@ export const fetchCodes = async(user)=>{
 }
 
 export const createCode = async (user, title, code, language, input) => {
-    const url = "http://localhost:4000/api/codes";
+    const url = "https://codelab-server-bo57m0rzi-shivam-sharma-s-projects.vercel.app/api/codes";
     const options = {
         method: 'POST',
         headers: {
@@ -67,7 +67,7 @@ export const createCode = async (user, title, code, language, input) => {
 }
 
 export const updateCode = async (user, id, title, code, language, input) => {
-    const url = `http://localhost:4000/api/codes/${id}`;
+    const url = `https://codelab-server-bo57m0rzi-shivam-sharma-s-projects.vercel.app/api/codes/${id}`;
     const options = {
         method: 'PUT',
         headers:{
@@ -91,7 +91,7 @@ export const updateCode = async (user, id, title, code, language, input) => {
 }
 
 export const deleteCode = async (user, id) => {
-    const url = `http://localhost:4000/api/codes/${id}`;
+    const url = `https://codelab-server-bo57m0rzi-shivam-sharma-s-projects.vercel.app/api/codes/${id}`;
     const options = {
         method: 'DELETE',
         headers:{
@@ -108,7 +108,7 @@ export const deleteCode = async (user, id) => {
 }
 
 export const basicLogin = async (data) => {
-    const url = 'http://localhost:4000/api/basicauth/login';
+    const url = 'https://codelab-server-bo57m0rzi-shivam-sharma-s-projects.vercel.app/api/basicauth/login';
     const options = {
         method: 'POST',
         headers: {
@@ -126,7 +126,7 @@ export const basicLogin = async (data) => {
 }
 
 export const basicSignup = async (data) => {
-    const url = 'http://localhost:4000/api/basicauth/signup';
+    const url = 'https://codelab-server-bo57m0rzi-shivam-sharma-s-projects.vercel.app/api/basicauth/signup';
     const options = {
         method: 'POST',
         headers: {

@@ -24,7 +24,7 @@ const Header = () => {
     const navigate = useNavigate();
 
     const loginRedirect = () => {
-        window.location.href = 'http://localhost:4000/api/auth/google'; //backend url change
+        window.location.href = 'https://codelab-server-bo57m0rzi-shivam-sharma-s-projects.vercel.app/api/auth/google'; //backend url change
     }
     const logoutHandler = () => {
         localStorage.removeItem('currUser');
