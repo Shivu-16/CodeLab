@@ -20,4 +20,4 @@ Styling and UI is done using Tailwind CSS and Ant Design.<br/>
 <img width="28" src="https://cdn.simpleicons.org/antdesign/"/>
 
 ## Deployment
-### This app is deployed on: [https://.vercel.app/](https://.vercel.app/)
+### This app is deployed on: [[https://.vercel.app/](https://codelab-client.vercel.app/)]([https://.vercel.app/](https://codelab-client.vercel.app/))
