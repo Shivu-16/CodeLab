@@ -1,0 +1,144 @@
+import React from "react";
+
+
+export const codeCompile = async (language, code, input) => {
+    const URL = "http://localhost:4000/api/compile";//change after 6 7
+    const options = {
+        method: "POST",
+        headers: {
+            "content-type": "application/json",
+        },
+        body: JSON.stringify({language,code,input}),
+    };
+
+    try {
+        const response = await fetch(URL, options);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.log(error);
+    }
+    return {}
+}
+
+
+export const fetchCodes = async(user)=>{
+    console.log(user.token)
+    const url = 'http://localhost:4000/api/codes';
+    const options = {
+        method: 'GET',
+        headers: {
+            'authorization': `Bearer ${user.token}`
+        }
+    }
+    try {
+        const response = await fetch(url, options);
+        let data = await response.json();
+        console.log(data)
+        // data = data.reverse();
+        return data;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const createCode = async (user, title, code, language, input) => {
+    const url = "http://localhost:4000/api/codes";
+    const options = {
+        method: 'POST',
+        headers: {
+            'authorization': `Bearer ${user.token}`,
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify({
+            title,
+            code,
+            language,
+            input
+        })
+    }
+    try {
+        const response = await fetch(url, options);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        throw new Error('Error creating code');
+    }
+}
+
+export const updateCode = async (user, id, title, code, language, input) => {
+    const url = `http://localhost:4000/api/codes/${id}`;
+    const options = {
+        method: 'PUT',
+        headers:{
+            'authorization': `Bearer ${user.token}`,
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify({
+            title,
+            code,
+            language,
+            input
+        })
+    }
+    try {
+        const response = await fetch(url, options);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const deleteCode = async (user, id) => {
+    const url = `http://localhost:4000/api/codes/${id}`;
+    const options = {
+        method: 'DELETE',
+        headers:{
+            'authorization': `Bearer ${user.token}`,
+        }
+    }
+    try {
+        const response = await fetch(url, options);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const basicLogin = async (data) => {
+    const url = 'http://localhost:4000/api/basicauth/login';
+    const options = {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    }
+    try {
+        const response = await fetch(url, options);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const basicSignup = async (data) => {
+    const url = 'http://localhost:4000/api/basicauth/signup';
+    const options = {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    }
+    try {
+        const response = await fetch(url, options);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.log(error);
+    }
+}
